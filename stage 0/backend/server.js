@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
     const response = {
       email: "glagogideonelorm2006@gmail.com", 
       current_datetime: new Date().toISOString(), 
-      github_url: "gtkmgkfdmgvk" // Replace with your repo URL
+      github_url: "<https://github.com/glaogideonelorm/HNG/tree/78857356a0d5f1278194a8210ebff1bf998a8bc9/stage%200/backend>" 
     };
 
     res.status(200).json(response);
