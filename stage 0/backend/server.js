@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
       email: "glagogideonelorm2006@gmail.com", 
       current_datetime: new Date().toISOString(), 
       github_url: "<https://github.com/glaogideonelorm/hng_backend.stage0>" 
-    };
+    }; 
 
     res.status(200).json(response);
   } catch (error) {
