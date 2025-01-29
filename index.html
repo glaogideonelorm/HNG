@@ -15,7 +15,7 @@
         margin: 0;
       }
       .profile-card {
-        background: white;
+        background: #e3f2fd; /* Light blue background */
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -24,10 +24,9 @@
         width: 100%;
       }
       .profile-picture {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
+        width: 150px; /* Reduced size */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 15px; /* Curved edges */
       }
       .social-links a {
         margin: 0 10px;
@@ -43,9 +42,13 @@
   </head>
   <body>
     <div class="profile-card">
-        <img src="https://" alt="Profile Picture" class="profile-picture" data-testid="profilePicture">
-        
-      <h2 data-testid="fullName">Glago Gideon Elorme</h2>
+      <img
+        src="pfp.jpeg"
+        alt="Profile Picture"
+        class="profile-picture"
+        data-testid="profilePicture"
+      />
+      <h2 data-testid="fullName">Glago Gideon Elorm</h2>
       <h4 data-testid="jobTitle">Front-End Developer</h4>
       <p data-testid="shortBio">
         A passionate front-end developer who enjoys creating clean, interactive,
