@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        margin: 0;
+      }
+      .profile-card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        max-width: 350px;
+        width: 100%;
+      }
+      .profile-picture {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .social-links a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #0073b1;
+        font-size: 20px;
+      }
+      .utc-time {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile-card">
+        <img src="https://" alt="Profile Picture" class="profile-picture" data-testid="profilePicture">
+        
+      <h2 data-testid="fullName">Glago Gideon Elorme</h2>
+      <h4 data-testid="jobTitle">Front-End Developer</h4>
+      <p data-testid="shortBio">
+        A passionate front-end developer who enjoys creating clean, interactive,
+        and user-friendly interfaces.
+      </p>
+      <p data-testid="currentLocation">Accra, Ghana</p>
+      <p data-testid="emailAddress">glagogideonelorm2006@gmail.com</p>
+      <div class="social-links" data-testid="socialLinks">
+        <a href="https://www.linkedin.com/in/glagogideon/" target="_blank"
+          >LinkedIn</a
+        >
+        <a
+          href="https://github.com/glaogideonelorm/glaogideonelorm"
+          target="_blank"
+          >GitHub</a
+        >
+      </div>
+      <p class="utc-time" data-testid="currentTimeUTC">Loading UTC Time...</p>
+    </div>
+
+    <script>
+      function updateUTCTime() {
+        const utcTimeElement = document.querySelector(".utc-time");
+        const now = new Date();
+        utcTimeElement.textContent = `UTC Time: ${
+          now.toISOString().split("T")[1].split(".")[0]
+        }`;
+      }
+      updateUTCTime();
+    </script>
+  </body>
+</html>
